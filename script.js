@@ -302,33 +302,39 @@
 // sample()
 
 // #generate
-function* generate(){
-    yield 1
-    yield 2
-    yield 3
+// function* generate(){
+    // yield 1
+    // yield 2
+    // yield 3
 
-}
-const res=generate()
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
+// }
+// const res=generate()
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
 
-// #curry
-function add(a){
-    function add(b){
-        function add(c){
-            return a+b+c
-        }
-    }
-}
-console.log(add(2)(3)(4))
-// #otherway
-const add=a=>b=>c=>a+b+c
-console.log(add(2)(3)(4))
+// // #curry
+// function add(a){
+//     function add(b){
+//         function add(c){
+//             return a+b+c
+//         }
+//     }
+// }
+// console.log(add(2)(3)(4))
+// // #otherway
+// const add=a=>b=>c=>a+b+c
+// console.log(add(2)(3)(4))
 
-// #otherway
-const first=add(34)
-const second=first(24)
-const third=second(6)
-console.log(third)
+// // #otherway
+// switch(grade){
+//     case "a":
+//         const first=add(34)
+//         const second=first(24)
+//         const third=second(6)
+//         console.log(third)
+//         break;
+//     default:
+//         console.log("Invalid grade")
+// }
