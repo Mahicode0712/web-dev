@@ -327,7 +327,7 @@
 // const add=a=>b=>c=>a+b+c
 // console.log(add(2)(3)(4))
 
-// // #otherway
+// #otherway
 // switch(grade){
 //     case "a":
 //         const first=add(34)
@@ -338,3 +338,4 @@
 //     default:
 //         console.log("Invalid grade")
 // }
+
