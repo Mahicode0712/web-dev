@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 
-
-function topbar() {
+function TopBar() {
   return (
     <div>
-      <h1>Topbar</h1>
+      <h1>Logo</h1>
+      <ul>
+        <li>Entertainment</li>
+        <li>Sports</li>
+        <li>Politics</li>
+      </ul>
     </div>
-  )
+  );
 }
 
-export default topbar
+export default TopBar;
