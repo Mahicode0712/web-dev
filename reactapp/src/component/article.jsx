@@ -1,46 +1,58 @@
+import React, {useState} from 'react'
+import style from '../CSS/Article.module.css'
+import style1 from '../CSS/Homepage.module.css'
+
+// function Article(props) {
+//   const [count, setCount]=useState(0)
+
+
+//   const handleIncrement=()=>{
+//     setCount(count+1)
+//   }
+//   return (
+//     <div>
+//       <h1>Article</h1>
+//        <h3>{props.title}</h3> 
+//       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi fugiat pariatur eos quibusdam ratione possimus adipisci, impedit, autem ad quo, et cum laudantium deleniti. Soluta molestias amet quas labore.</p>
+//       <h2>{count}</h2>
+//       <button className={style.btn} onClick={handleIncrement}>Increment</button>
+//        <button className={style1.btn}>Decrement</button> 
+
+//     </div>
+//   )
+// }
+// export default Article
+
 import React from 'react'
-
-function Article(props) {
-  return (
-    <div>
-      <h1>Article</h1>
-       <h3>{props.title}</h3> 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi fugiat pariatur eos quibusdam ratione possimus adipisci, impedit, autem ad quo, et cum laudantium deleniti. Soluta molestias amet quas labore.</p>
-    </div>
-  )
-}
-
-export default Article
-
-import React from 'react'
-function Article(props) {
-  const[count,setCount]=React.useState(0)
-  const hamdleIncrement=()=>{
-    setCount(count+1)
-  }
-  
-// import { add as addition } from '../utility'
+import { add as addition } from '../utility'
 
 class Article extends React.Component {
     constructor(props) {
       super(props)
       this.state={
         count:0,
-        name:"Mahi"
-      }       // console.log(addition(2,3))
+        name:"Alex"
+      }
+    //   console.log(addition(2,3))
     }
 
-    // componentDidMount(){
-    //     console.log("Component Mounted")
-    // }
+    componentDidMount(){
+        console.log("componentDidMount")
+    }
 
-    shouldComponentUpdate(nextProps,nextState){
-        console.log("Should component update")
+    shouldComponentUpdate(nextProps, nextState){
+      if(nextState.count===1)return false
+        console.log("shouldComponentUpdate")
         return true
     }
 
+
     componentDidUpdate(){
-        console.log("Component Updated")
+        console.log("componentDidUpdate")
+    }
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount")
     }
 
     handleClick=()=>{
@@ -48,6 +60,7 @@ class Article extends React.Component {
         // console.log(this.state.count)
         this.setState({count: this.state.count+1})
     }
+
     handleDecrement=()=>{
         this.setState({count: this.state.count-1})
     }
@@ -56,40 +69,13 @@ class Article extends React.Component {
       <div>
         <h1>Article</h1>
         <h3>{this.state.count}</h3>
-        <h3>{this.state.name}</h3>
-        <h3>{props.title}</h3>
-        
-         <p>.</p> 
-         <h2>{count}</h2>
-         <button onClick={handleIncrement}>Increment</button>
-         
-         <button onClick={this.handleClick}>Increment</button>
-        <button onClick={this.handleDecrement}>Decrement</button> 
-        <h3>{this.props.title}</h3>  
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi fugiat pariatur eos quibusdam ratione possimus adipisci, impedit, autem ad quo, et cum laudantium deleniti. Soluta molestias amet quas labore.</p>
+        <button className={style.btn}onClick={this.handleClick}>Increment</button>
+        <button className={style1.btn} onClick={this.handleDecrement}>Decrement</button>
+        <h3>{this.props.title}</h3> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi fugiat pariatur eos quibusdam ratione possimus adipisci, impedit, autem ad quo, et cum laudantium deleniti. Soluta molestias amet quas labore.</p>
       </div>
     )
   }
- }
 }
+
 export default  Article
-
-import React from "react"
-function Article(props){
-    const [count,setCount]=React.useState(0)
-
-    const handleIncrement=()=>{
-        setCount(count+1)
-    }
-    return(
-        <div>
-            <h1>article</h1>
-            <h3>{props.title}</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit culpa aut eum ullam maxime voluptates aperiam sed. Corporis tempore optio nemo architecto iste rerum facilis ducimus, porro consequuntur dolore labore!</p>
-            <h2>{count}</h2>
-            <button onClick={handleIncrement}>Increment</button>
-            {/*<button onclick={handleIncrement}>decrement</button>*/   }
-        </div>
-    )
-} 
-export default Article

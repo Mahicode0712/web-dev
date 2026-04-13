@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function TopBar() {
   return (
@@ -10,7 +10,7 @@ function TopBar() {
         <li>Politics</li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default TopBar;
+export default TopBar
