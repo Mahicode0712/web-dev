@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "../CSS/Article.module.css";
 import style1 from "../CSS/Homepage.module.css";
+import styled from "styled-components";
 
 // function Article(props) {
 //   const [count, setCount]=useState(0)
@@ -73,16 +74,18 @@ class Article extends React.Component {
         <button className={style1.btn} onClick={this.handleDecrement}>
           Decrement
         </button>
-        <h3>{this.props.title}</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-          eligendi fugiat pariatur eos quibusdam ratione possimus adipisci,
-          impedit, autem ad quo, et cum laudantium deleniti. Soluta molestias
-          amet quas labore.
-        </p>
+        <Button>FIRST</Button>
+        <Button styled="">Submit</Button>
       </div>
     );
   }
 }
 
 export default Article;
+
+const Button=styled.button`
+background-color:blue;
+color:white;
+padding:10px;
+border-radius:5px;
+`;
