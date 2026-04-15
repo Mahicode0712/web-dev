@@ -1,10 +1,6 @@
 .btn{
-    
     background-color: chocolate;
-    border:2px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 15px;
-    cursor: pointer;
-
+    color: wheat;
+    width: 100px;
+    height: 30px;
 }

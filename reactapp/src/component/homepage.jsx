@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react'
 
-function homepage() {
-  const loggedIn = true;
-  if (loggedIn) {
-    return <button>Logout</button>;
-  } else {
-    return <button>Login</button>;
-  }
-  // ternary operator
-  // return (
-  //     loggedIn ? <button>Logout</button> : <button>Login</button>
-  //  )
+function HomePage() {
+  const loggedin=true;
+//   if(loggedin){
+//     return (
+//         <button>Logout</button>
+//     )
+//   }else{
+//     return (
+//         <button>Login</button>
+//     )
+//   }
+    return (
+        loggedin?<button>Logout</button>:<button>Login</button>
+    )
 }
-export default homepage;
+
+export default HomePage
