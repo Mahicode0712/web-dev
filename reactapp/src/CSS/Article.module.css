@@ -1,8 +1,10 @@
 .btn{
+    
     background-color: chocolate;
     border:2px solid black;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 15px;
     cursor: pointer;
+
 }

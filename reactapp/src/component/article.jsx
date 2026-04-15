@@ -31,16 +31,8 @@ function Article(props) {
 
 export default Article;
 
-
-const Button1=styled.button`
-background-color: ${props=>props.yellow ? "yellow" : "red"};  
-color: white;
-width: 100px;
-height: 30px;
-`
-
 const Button=styled.button`
-background-color: ${props=>props.styled ? "green" : "blue"};  
+background-color: ${props=>props.yellow ? "yellow" : "red"};  
 color: white;
 width: 100px;
 height: 30px;
