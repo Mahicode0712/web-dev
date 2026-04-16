@@ -15,15 +15,15 @@ function Article(props) {
    return (
       <div>
         <h1>Article</h1>
-        <h3>{this.state.count}</h3>
-        <button className={style.btn} onClick={this.handleClick}>
-          Increment
-        </button>
-        <button className={style1.btn} onClick={this.handleDecrement}>
+        <h3>{props.title}</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio itaque expedita soluta ex rerum quaerat libero nulla obcaecati impedit maiores ratione deserunt beatae ipsa aliquid ab, laboriosam dicta temporibus earum.</p>
+        <h2>{count}</h2>
+        <button className={style.btn} onClick={handleIncrement}> Increment </button>
+        <button className={style1.btn} onClick={()=>setCount(count-1)}>
           Decrement
         </button>
-        <Button>FIRST</Button>
-        <Button styled="">Submit</Button>
+        <Button> FIRST </Button>
+        <Button yellow > Submit </Button>
       </div>
     );
   }
