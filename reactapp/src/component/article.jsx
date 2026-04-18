@@ -25,7 +25,7 @@ function Article(props) {
         <Button> FIRST </Button>
         <Button lightgreen > Submit </Button>
 
-        <Button className= 'bg-pink text-black h-10 border-3 border-wheat p-5 m-20'>Tailwind Button</Button>
+        <Button className= 'bg-pink text-black w-100 h-30 border-3 p-5 m-20'>Tailwind Button</Button>
       </div>
     );
   }
@@ -39,6 +39,7 @@ color: white;
 width: 100px;
 height: 30px;
 margin: 20px; 
+border: 3px solid black;
 `
 
 
