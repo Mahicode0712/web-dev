@@ -23,9 +23,9 @@ function Article(props) {
           Decrement
         </button>
         <Button> FIRST </Button>
-        <Button lightgreen margin-20 > Submit </Button>
+        <Button lightgreen > Submit </Button>
 
-        <Button className= 'bg-pink text-black h-10 border-3 border-wheat p-5'>Tailwind Button</Button>
+        <Button className= 'bg-pink text-black h-10 border-3 border-wheat p-5 m-20'>Tailwind Button</Button>
       </div>
     );
   }
@@ -38,6 +38,7 @@ background-color: ${props => props.lightgreen ? "lightgreen" : "red"};
 color: white;
 width: 100px;
 height: 30px;
+margin: 20px; 
 `
 
 
