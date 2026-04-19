@@ -16,7 +16,7 @@ function Article(props) {
       <div>
         <h1>Article</h1>
         <h3>{props.title}</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio itaque expedita soluta ex rerum quaerat libero nulla obcaecati impedit maiores ratione deserunt beatae ipsa aliquid ab, laboriosam dicta temporibus earum.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio itaque expedita soluta ex rerum quaerat libero nulla obcaecati       impedit maiores ratione deserunt beatae ipsa aliquid ab, laboriosam dicta temporibus earum.</p>
         <h2>{count}</h2>
         <button className={style.btn} onClick={handleIncrement}> Increment </button>
         <button className={style1.btn} onClick={()=>setCount(count-1)}>
