@@ -36,7 +36,7 @@ export default Article;
 const Button=styled.button`
 background-color: ${props => props.lightgreen ? "lightgreen" : "red"};  
 color: white;
-width: 100px
+width: 100px;
 height: 30px;
 margin: 20px; 
 border: 3px solid black;
