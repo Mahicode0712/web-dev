@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../CSS/Article.module.css";
 import style1 from "../CSS/Homepage.module.css";
 //import styled from "styled-components"
-import styled from "@emotion/styled"
-import { css } from '@emotion/react'
+import styled from "@emotion/styled";
+import { css } from '@emotion/react';
+import Axios from "axios";
 
 
 function Article(props) {
@@ -41,6 +42,13 @@ height: 30px;
 margin: 20px; 
 border: 3px solid black;
 `
+useEffect(()=>{
+  const fetchData=async()=>{
+    const response=await axios.get("https://jsonplaceholder.typicode.com/posts")
+    console.log(response.data)
+}
+fetchData()
+},[])
 
 
 // import React from 'react'
