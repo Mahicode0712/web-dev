@@ -7,19 +7,26 @@ function Contact(){
     const [message, setMessage]=useState("")
 
 
-    const handleSubmit=()=>{
+    const handleSubmit=(data)=>{
         event.preventDefault();
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Message:", message);
+
+    if(!name || !email || !message){
+        alert("Please fill in all fields")
+        return;
+    }
+       console.log(data)
+       console.log(name, email, message)
+
     }
     return(
         <div>
+            <form onSubmit={handleSubmit}>
             <h1>Contact Us</h1>
             <input type="text" placeholder="Name" value={name} onChange={(e)=>setName(e.target.value)}/>
             <input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
             <textarea placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-            <button onClick={handleSubmit}>Submit</button>
+            <button type="submit">Submit</button>
+            </form>
         </div>
         
     )
