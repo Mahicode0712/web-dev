@@ -19,7 +19,7 @@ function Article(props) {
     return ()=>{
       console.log("Component Unmounted")
     }
-  },[name])
+  },[name]) 
 
   useEffect(()=>{
     // const fetchData=async()=>{
