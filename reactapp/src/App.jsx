@@ -4,16 +4,19 @@ import TopBar from "./component/TopBar";
 import Article from "./component/Article";
 import HomePage from "./component/HomePage";
 import Contact from "./component/contact";
+import { Routes } from "react-router-dom";
 
 function App() {
   const [title, setTitle] = useState("Sample Title");
 
   return (
     <>
-      <HomePage />
-      <TopBar />
-      <Article title={title} />
-      <Contact />
+    <Routes>
+      <Route path="/" element={<><HomePage /><TopBar /></>} />
+      <Route path="/article" element={<Article title={title} />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+
     </>
   );
 }
