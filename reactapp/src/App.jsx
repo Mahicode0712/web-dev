@@ -12,17 +12,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <HomePage />
-              <TopBar />
-            </>
-          }
-        />
+        <Route path="/"element={<><HomePage /><TopBar /></>}/>
         <Route path="/article" element={<Article title={title} />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Profile:username" element={<Profile />} />
       </Routes>
     </>
   );

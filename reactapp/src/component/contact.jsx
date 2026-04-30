@@ -1,5 +1,5 @@
 import  React, {useState} from "react";
-
+import { Navigate } from "react-router-dom";
 
 function Contact(){
     const [name, setName]=useState("")
@@ -9,18 +9,19 @@ function Contact(){
 
     const handleSubmit=(data)=>{
         event.preventDefault();
-
-    if(!name || !email || !message){
-        alert("Please fill in all fields")
-        return;
+        if (!email.endsWith("krmu.edu.in")){
+            alert("Please enter a valid email address")
+            return;
+        }
+       
     }
        console.log(data)
        console.log(name, email, message)
-
+       Navigate("/")
     }
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+           <form onSubmit={()=>handleSubmit("Sample string")}>
             <h1>Contact Us</h1>
             <input type="text" placeholder="Name" value={name} onChange={(e)=>setName(e.target.value)}/>
             <input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
@@ -30,6 +31,6 @@ function Contact(){
         </div>
         
     )
-}
+
 
 export default Contact
